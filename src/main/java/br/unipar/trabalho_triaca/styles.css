@@ -17,7 +17,8 @@ h1 {
 }
 
 table {
-    width: 60%; /* Reduzir a largura da tabela */
+    width: 100%; /* Faz a tabela cobrir toda a largura da barra de dados */
+    max-width: 100%; /* Define um tamanho máximo para a tabela */
     border-collapse: collapse;
     margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
@@ -51,4 +52,60 @@ button:hover {
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #023872;
+    color: white;
+    text-align: left;
+    z-index: 1000;
+}
+
+#header h1 {
+    margin-left: 20px;
+    color: white;
+    
+}
+
+#content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0 10px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #023872;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+#searchBar {
+    width: 100%;
+    padding: 10px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#charts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#charts canvas {
+    width: 20%;
+    height: 200px;
 }

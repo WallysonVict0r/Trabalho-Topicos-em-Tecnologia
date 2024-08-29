@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unipar Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body>
-<h1>Switches</h1>
+<div id="charts">
+    <canvas id="chart1"></canvas>
+    <canvas id="chart2"></canvas>
+    <canvas id="chart3"></canvas>
+</div>
+<div id="searchBar">
+    <input type="text" id="searchInput" placeholder="Pesquisar...">
+</div>
+<div id="header">
+    <h1>Switches</h1>
+</div>
+<div id="content">
 <table id="switchesTable">
     <thead>
     <tr>
@@ -28,8 +40,12 @@
     <tbody>
     </tbody>
 </table>
-<button id="prevPage" disabled>Previous Page</button>
-<button id="nextPage">Next Page</button>
+</div>
+
+<div id="footer">
+    <button id="prevPage" disabled>Previous Page</button>
+    <button id="nextPage">Next Page</button>
+</div>
 
 <script src="Swiitch.js"></script>
 </body>
