@@ -11,6 +11,10 @@ public class SwitchService {
     @Autowired
     private SwitchRepository switchRepository;
 
+
+    public Page<Switch> findAll(Pageable pageable) {
+        return switchRepository.findAll(pageable);
+    }
     public Page<Switch> getSwitches(Pageable pageable) {
         return switchRepository.findAll(pageable);
     }

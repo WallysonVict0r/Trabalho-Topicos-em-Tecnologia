@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -23,6 +24,10 @@ table {
     margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
+#tableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
 
 th, td {
     padding: 10px; /* Ajustar o padding nas células da tabela */
@@ -32,7 +37,7 @@ th, td {
 
 th {
     background-color: #007bff;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 button {
@@ -43,6 +48,14 @@ button {
     cursor: pointer;
     margin-right: 10px;
     transition: background-color 0.3s ease;
+}
+#chartDiv{
+
+    max-width: 300px;
+    height: 400px;
+    margin-top: 300px;
+    
+
 }
 
 button:hover {
@@ -60,7 +73,8 @@ button:disabled {
     width: 100%;
     background-color: #023872;
     color: white;
-    text-align: left;
+    margin: 10px 0;
+    text-align: center;
     z-index: 1000;
 }
 
@@ -71,6 +85,9 @@ button:disabled {
 }
 
 #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
@@ -89,23 +106,51 @@ button:disabled {
     z-index: 1000;
 }
 #searchBar {
+    text-align: center;
     width: 100%;
+    margin-bottom: 20px;
     padding: 10px;
 }
 
 #searchInput {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: 1px solid #ddd;
 }
 
 #charts {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+#chart1, #chart2 {
+    width: 45%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+#switchesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+#switchesTable th, #switchesTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#switchesTable th {
+    background-color: #f2f2f2;
 }
 
-#charts canvas {
-    width: 20%;
-    height: 200px;
+#pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#pagination button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
