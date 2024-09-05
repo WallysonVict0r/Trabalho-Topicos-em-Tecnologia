@@ -3,34 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unipar Dashboard</title>
+    <title>Switches Dashboard</title>
+    <script src="https://code.jscharting.com/latest/jscharting.js"></script>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-<h1>Switches</h1>
-<table id="switchesTable">
-    <thead>
-    <tr>
-        <th>Registro</th>
-        <th>Data</th>
-        <th>Hora</th>
-        <th>Hostname</th>
-        <th>IP Address</th>
-        <th>MAC Address</th>
-        <th>Marca</th>
-        <th>Modelo</th>
-        <th>Num Serie</th>
-        <th>Versao</th>
-        <th>Imobilizado</th>
-    </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
-<button id="prevPage" disabled>Previous Page</button>
-<button id="nextPage">Next Page</button>
+    
+    <div id="header">
+        <h1>Switches</h1>
+    </div>
+    <div id="content">
+        <div id="chartDiv" >
+        </div>
+        
+        <div id="searchBar">
+        <input type="text" id="searchInput" placeholder="Pesquisar...">
+    </div>
+        <table id="switchesTable">
+            <thead>
+                <tr>
+                    <th>Registro</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Hostname</th>
+                    <th>IP Address</th>
+                    <th>MAC Address</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Num Serie</th>
+                    <th>Versao</th>
+                    <th>Imobilizado</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
 
-<script src="Swiitch.js"></script>
+        <div id="pagination">
+            <button id="prevPage" disabled>Anterior</button>
+            <button id="nextPage" enabled>Próximo</button>
+        </div>
+    </div>
+
+    <script src="Swiitch.js"></script>
 </body>
 </html>
