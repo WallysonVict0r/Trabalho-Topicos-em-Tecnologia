@@ -4,10 +4,6 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     box-sizing: border-box;
 }
 
@@ -17,55 +13,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-table {
-    width: 100%; /* Faz a tabela cobrir toda a largura da barra de dados */
-    max-width: 100%; /* Define um tamanho máximo para a tabela */
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);
-}
-#tableContainer {
-    width: 100%;
-    overflow-x: auto;
-}
-
-th, td {
-    padding: 10px; /* Ajustar o padding nas células da tabela */
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th {
-    background-color: #007bff;
-    color: rgb(0, 0, 0);
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-}
-#chartDiv{
-
-    max-width: 300px;
-    height: 400px;
-    margin-top: 300px;
-    
-
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
 #header {
     position: fixed;
     top: 0;
@@ -73,38 +20,39 @@ button:disabled {
     width: 100%;
     background-color: #023872;
     color: white;
-    margin: 10px 0;
     text-align: center;
     z-index: 1000;
 }
 
 #header h1 {
-    margin-left: 20px;
-    color: white;
-    
+    margin: 0;
+    padding: 20px 0;
 }
 
 #content {
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
     padding: 0 10px;
 }
 
-#footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #023872;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
+#chartsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
+
+.chart {
+    flex: 1 1 45%;
+    max-width: 45%;
+    height: 300px;
+    min-width: 300px;
+}
+
 #searchBar {
     text-align: center;
     width: 100%;
@@ -118,27 +66,18 @@ button:disabled {
     border: 1px solid #ddd;
 }
 
-#charts {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-#chart1, #chart2 {
-    width: 45%;
-    height: 400px;
-    margin-bottom: 20px;
-}
 #switchesTable {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
+
 #switchesTable th, #switchesTable td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
+
 #switchesTable th {
     background-color: #f2f2f2;
 }
@@ -153,4 +92,23 @@ button:disabled {
     margin: 0 10px;
     font-size: 16px;
     cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }

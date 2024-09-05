@@ -28,7 +28,11 @@ public class SwitchController {
 
     }
 
-   
+    @GetMapping("/api/switches/all")
+    public Page<Switch> getAllSwitches() {
+        return switchService.findAll(Pageable.unpaged());
+    }
+
 
 
 
