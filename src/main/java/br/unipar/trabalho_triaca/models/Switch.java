@@ -1,4 +1,4 @@
-package br.unipar.trabalho_triaca;
+package br.unipar.trabalho_triaca.models;
 
 import jakarta.persistence.*;
 import java.util.Date;

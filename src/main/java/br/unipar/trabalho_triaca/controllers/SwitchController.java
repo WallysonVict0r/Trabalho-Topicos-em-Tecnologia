@@ -1,5 +1,7 @@
-package br.unipar.trabalho_triaca;
+package br.unipar.trabalho_triaca.controllers;
 
+import br.unipar.trabalho_triaca.services.SwitchService;
+import br.unipar.trabalho_triaca.models.Switch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
