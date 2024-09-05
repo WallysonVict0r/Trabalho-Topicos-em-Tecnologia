@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,21 @@
     <script src="https://code.jscharting.com/latest/jscharting.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
     <div id="header">
         <h1>Switches</h1>
     </div>
     <div id="content">
-        <div id="chartDiv" >
+        <div id="chartsContainer">
+            <div id="chartDiv1" class="chart"></div>
+            <div id="chartDiv2" class="chart"></div>
+            <div id="chartDiv3" class="chart"></div>
+            <div id="chartDiv4" class="chart"></div>
         </div>
-        
         <div id="searchBar">
-        <input type="text" id="searchInput" placeholder="Pesquisar...">
-    </div>
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+        </div>
         <table id="switchesTable">
             <thead>
                 <tr>
@@ -35,16 +39,15 @@
                     <th>Imobilizado</th>
                 </tr>
             </thead>
-            <tbody>
-            </tbody>
+            <tbody></tbody>
         </table>
 
         <div id="pagination">
             <button id="prevPage" disabled>Anterior</button>
-            <button id="nextPage" enabled>Próximo</button>
+            <button id="nextPage">Próximo</button>
         </div>
     </div>
-
     <script src="Swiitch.js"></script>
 </body>
+
 </html>
